@@ -1,0 +1,32 @@
+/* Thiết lập cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    width: 100%;
+}
+
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: lightblue;
+    padding: 20px;
+    box-sizing: border-box; /* Giữ tổng kích thước cột đúng 60% kể cả khi có padding */
+}
+
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+    box-sizing: border-box; /* Bổ sung để không bị tràn chiều rộng gây rớt hàng */
+}
+
+/* Kỹ thuật Clearfix xử lý tràn float */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
